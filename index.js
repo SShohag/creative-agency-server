@@ -29,7 +29,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: 
 client.connect(err => {
   const orderCollection = client.db("creativeAgency").collection("orders");
   const reviewCollection = client.db("creativeAgency").collection("reviews");
-  const serviceCollection = client.db("creativeAgency").collection("services")
+  const serviceCollection = client.db("creativeAgency").collection("services");
 
   app.post('/addReview', (req, res)=>{
     const review = req.body;
